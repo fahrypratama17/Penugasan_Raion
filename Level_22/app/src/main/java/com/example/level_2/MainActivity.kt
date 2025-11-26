@@ -11,37 +11,35 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.example.level_2.ui.theme.Level_2Theme
+import com.example.level_2.view.HappyPlaylistPage
+import com.example.level_2.view.HomePage
+import com.example.level_2.view.HomePageHappy
+import com.example.level_2.view.HomePageSad
+import com.example.level_2.view.SadPlaylistPage
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            Level_2Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+            navigation(navController = rememberNavController())
         }
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Level_2Theme {
-        Greeting("Android")
+    @Composable
+    fun navigation(navController: NavHostController) {
+        val navController = rememberNavController()
+        NavHost(navController = navController, startDestination = "HomePage") {
+            composable("HomePage") { HomePage(navController) }
+            composable("happyPage") { HomePageHappy(navController) }
+            composable("sadPage") { HomePageSad(navController) }
+            composable("happyPlaylist") { HappyPlaylistPage(navController) }
+            composable("sadPlaylist") { SadPlaylistPage(navController) }
+        }
     }
 }

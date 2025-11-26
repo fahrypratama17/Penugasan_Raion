@@ -18,16 +18,18 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.level_2.model.HappyPlaylistSong
 import com.example.level_2.ui.theme.blueGradient
+import com.example.level_2.ui.theme.yellowGradient
 
-@Preview
+//@Preview
 @Composable
-fun HappyPlaylistPage() {
+fun HappyPlaylistPage(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(blueGradient)
+            .background(yellowGradient)
             .padding(20.dp)
     ) {
         Text("Lagu Happy", fontSize = 25.sp, fontWeight = FontWeight.Bold)
@@ -40,7 +42,7 @@ fun HappyPlaylistPage() {
         }
 
         Button(
-            onClick = {},
+            onClick = {navController.navigate("HomePage")},
             modifier = Modifier
                 .fillMaxSize()
         ) {

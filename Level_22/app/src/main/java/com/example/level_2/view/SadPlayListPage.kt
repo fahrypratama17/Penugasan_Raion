@@ -18,12 +18,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.level_2.model.SadPlaylistSong
 import com.example.level_2.ui.theme.blueGradient
 
-@Preview
+//@Preview
 @Composable
-fun SadPlaylistPage() {
+fun SadPlaylistPage(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -40,7 +41,7 @@ fun SadPlaylistPage() {
         }
 
         Button(
-            onClick = {},
+            onClick = {navController.navigate("HomePage")},
             modifier = Modifier
                 .fillMaxSize()
         ) {
