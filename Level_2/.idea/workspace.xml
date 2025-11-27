@@ -9,70 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e60d78d-65e9-4476-bf4e-21b743812eb7" name="Changes" comment="feat: LoginPage + param on another page">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/.idea/AndroidProjectSystem.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/.idea/appInsightsSettings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/.idea/deploymentTargetSelector.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/.idea/migrations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/androidTest/java/com/example/level_2/ExampleInstrumentedTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/java/com/example/level_2/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/java/com/example/level_2/model/HappyPlaylistSong.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/java/com/example/level_2/model/SadPlaylistSong.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/java/com/example/level_2/model/song.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/java/com/example/level_2/ui/theme/Color.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/java/com/example/level_2/ui/theme/Theme.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/java/com/example/level_2/ui/theme/Type.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/java/com/example/level_2/view/HappyPlaylistPage.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/java/com/example/level_2/view/HappySongList.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/java/com/example/level_2/view/HomePage.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/java/com/example/level_2/view/HomePageHappy.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/java/com/example/level_2/view/HomePageSad.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/java/com/example/level_2/view/LoginPage.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/java/com/example/level_2/view/SadPlayListPage.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/java/com/example/level_2/view/SadSongList.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/res/values/themes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/app/src/test/java/com/example/level_2/ExampleUnitTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/gradle/libs.versions.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Level_22/settings.gradle.kts" beforeDir="false" />
-    </list>
+    <list default="true" id="6e60d78d-65e9-4476-bf4e-21b743812eb7" name="Changes" comment="fix: refactor" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,7 +18,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=PhysicalDevice, isTemplate=false, identifier=serial=NBMRFEVCQOEI4T8H)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -278,7 +215,23 @@
       <option name="project" value="LOCAL" />
       <updated>1764223883782</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix: refactor">
+      <option name="closed" value="true" />
+      <created>1764224417651</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764224417651</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix: refactor">
+      <option name="closed" value="true" />
+      <created>1764224466834</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1764224466834</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -287,19 +240,20 @@
     <MESSAGE value="feat: SadPlayListPage.kt" />
     <MESSAGE value="feat: Modularized" />
     <MESSAGE value="feat: LoginPage + param on another page" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: LoginPage + param on another page" />
+    <MESSAGE value="fix: refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: refactor" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
       <map>
         <entry key="com.example.level_2">
           <value>
-            <CheckInfo lastCheckTimestamp="1763998089019" />
+            <CheckInfo lastCheckTimestamp="1764224448221" />
           </value>
         </entry>
         <entry key="com.example.level_2.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1763998089020" />
+            <CheckInfo lastCheckTimestamp="1764224448220" />
           </value>
         </entry>
       </map>
