@@ -20,6 +20,7 @@ import com.example.level_2.view.HappyPlaylistPage
 import com.example.level_2.view.HomePage
 import com.example.level_2.view.HomePageHappy
 import com.example.level_2.view.HomePageSad
+import com.example.level_2.view.LoginPage
 import com.example.level_2.view.SadPlaylistPage
 
 class MainActivity : ComponentActivity() {
@@ -34,10 +35,21 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun navigation(navController: NavHostController) {
         val navController = rememberNavController()
-        NavHost(navController = navController, startDestination = "HomePage") {
-            composable("HomePage") { HomePage(navController) }
-            composable("happyPage") { HomePageHappy(navController) }
-            composable("sadPage") { HomePageSad(navController) }
+        NavHost(navController = navController, startDestination = "LoginPage") {
+            composable("LoginPage") { LoginPage(navController) }
+
+            composable("HomePage/{name}") { backStackEntry ->
+                val name = backStackEntry.arguments?.getString("name") ?: ""
+                HomePage(navController, name) }
+
+            composable("happyPage/{name}") { backStackEntry ->
+                val name = backStackEntry.arguments?.getString("name") ?: ""
+                HomePageHappy(navController, name) }
+
+            composable("sadPage/{name}") { backStackEntry ->
+                val name = backStackEntry.arguments?.getString("name") ?: ""
+                HomePageSad(navController, name) }
+
             composable("happyPlaylist") { HappyPlaylistPage(navController) }
             composable("sadPlaylist") { SadPlaylistPage(navController) }
         }

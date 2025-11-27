@@ -28,7 +28,8 @@ import com.example.level_2.ui.theme.neutralGradient
 //@Preview
 @Composable
 public fun HomePage(
-    navController: NavController
+    navController: NavController,
+    name: String
 ) {
     Column(
         modifier = Modifier
@@ -37,13 +38,14 @@ public fun HomePage(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text("Selamat Datang", fontSize = 40.sp, fontWeight = FontWeight.Bold, )
+        Text("Selamat Datang", fontSize = 40.sp, fontWeight = FontWeight.Bold)
+        Text(name, fontSize = 40.sp, fontWeight = FontWeight.Bold, color = Color.DarkGray)
 
         Spacer(Modifier.height(50.dp))
 
         Button(
             onClick = {
-                navController.navigate("happyPage")
+                navController.navigate("happyPage/$name")
                       },
             modifier = Modifier
                 .width(300.dp)
@@ -58,7 +60,7 @@ public fun HomePage(
 
         Button(
             onClick = {
-                navController.navigate("sadPage")
+                navController.navigate("sadPage/$name")
                       },
             modifier = Modifier
                 .width(300.dp)
@@ -69,29 +71,5 @@ public fun HomePage(
             )
 
         }
-
-        Spacer(Modifier.height(50.dp))
-
-        Text("", fontSize = 25.sp)
-
-        Spacer(Modifier.height(50.dp))
-
-        Button(
-            onClick = {
-                navController.navigate("sadPlaylist")
-            },
-            modifier = Modifier
-                .width(300.dp)
-                .height(40.dp)
-                .alpha(0f)
-
-        ) {
-            Text(
-                ""
-            )
-
-        }
-
-
     }
 }

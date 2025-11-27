@@ -3,10 +3,14 @@ package com.example.level_2.view
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.Button
@@ -19,6 +23,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import com.example.level_2.model.HappyPlaylistSong
 import com.example.level_2.ui.theme.blueGradient
 import com.example.level_2.ui.theme.yellowGradient
@@ -26,9 +31,12 @@ import com.example.level_2.ui.theme.yellowGradient
 //@Preview
 @Composable
 fun HappyPlaylistPage(navController: NavController) {
+    val scrollState = rememberScrollState()
+
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .verticalScroll(scrollState)
             .background(yellowGradient)
             .padding(20.dp)
     ) {
@@ -42,9 +50,9 @@ fun HappyPlaylistPage(navController: NavController) {
         }
 
         Button(
-            onClick = {navController.navigate("HomePage")},
+            onClick = { navController.navigate("HomePage")},
             modifier = Modifier
-                .fillMaxSize()
+                .fillMaxWidth()
         ) {
             Icon(
                 imageVector = Icons.Filled.ArrowBack,

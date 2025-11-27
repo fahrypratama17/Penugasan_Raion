@@ -7,7 +7,10 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material3.Button
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -25,7 +28,8 @@ import com.example.level_2.ui.theme.yellowGradient
 //@Preview
 @Composable
 public fun HomePageHappy(
-    navController: NavController
+    navController: NavController,
+    name: String
 ) {
     Column(
         modifier = Modifier
@@ -35,6 +39,7 @@ public fun HomePageHappy(
         verticalArrangement = Arrangement.Center
     ) {
         Text("Selamat Datang", fontSize = 40.sp, fontWeight = FontWeight.Bold)
+        Text(name, fontSize = 40.sp, fontWeight = FontWeight.Bold, color = Color.DarkGray)
 
         Spacer(Modifier.height(50.dp))
 
@@ -53,7 +58,7 @@ public fun HomePageHappy(
 
         Button(
             onClick = {
-                navController.navigate("sadPage")
+                navController.navigate("sadPage/$name")
                       },
             modifier = Modifier
                 .width(300.dp)
@@ -82,7 +87,11 @@ public fun HomePageHappy(
             Text(
                 "Masuk ke lagu Happy"
             )
-
+            Spacer(Modifier.width(10.dp))
+            Icon(
+                imageVector = Icons.Filled.ArrowForward,
+                contentDescription = "Masuk"
+            )
         }
     }
 }
