@@ -11,37 +11,41 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.aplikasi.ui.theme.AplikasiTheme
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.example.aplikasi.view.HomePageHappy
+import com.example.aplikasi.view.HomePageSad
+import com.example.aplikasi.view.LoginPage
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            AplikasiTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+            navigation(navController = rememberNavController())
         }
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+    @Composable
+    fun navigation(navController: NavHostController) {
+        val navController = rememberNavController()
+        NavHost(navController = navController, startDestination = "LoginPage") {
+            composable("LoginPage") { LoginPage(navController) }
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    AplikasiTheme {
-        Greeting("Android")
+            composable("HomePage/{name}") { backStackEntry ->
+                val name = backStackEntry.arguments?.getString("name") ?: ""
+                HomePage(navController, name) }
+
+            composable("happyPage/{name}") { backStackEntry ->
+                val name = backStackEntry.arguments?.getString("name") ?: ""
+                HomePageHappy(navController, name) }
+
+            composable("sadPage/{name}") { backStackEntry ->
+                val name = backStackEntry.arguments?.getString("name") ?: ""
+                HomePageSad(navController, name)
+            }
+        }
     }
 }
