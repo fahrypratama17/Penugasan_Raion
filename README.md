@@ -115,7 +115,7 @@ cd Penugasan_Raion/Level_3
 
 <div align="center">
 
-**Fahry Pratama**
+**Muhamad Fahry Pratama Putra | Naufal Mohammad Adhi | Ezrasto Mahardika Maydiputra**
 
 [![GitHub](https://img.shields.io/badge/GitHub-fahrypratama17-181717?style=for-the-badge&logo=github)](https://github.com/fahrypratama17)
 [![GitHub](https://img.shields.io/badge/GitHub-astopoi-181717?style=for-the-badge&logo=github)](https://github.com/astopoi)
