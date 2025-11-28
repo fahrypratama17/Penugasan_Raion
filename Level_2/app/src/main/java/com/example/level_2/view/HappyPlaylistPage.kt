@@ -30,7 +30,9 @@ import com.example.level_2.ui.theme.yellowGradient
 
 //@Preview
 @Composable
-fun HappyPlaylistPage(navController: NavController) {
+fun HappyPlaylistPage(
+    navController: NavController,
+    name: String) {
     val scrollState = rememberScrollState()
 
     Column(
@@ -50,7 +52,7 @@ fun HappyPlaylistPage(navController: NavController) {
         }
 
         Button(
-            onClick = { navController.navigate("HomePage")},
+            onClick = { navController.navigate("happyPage/$name")},
             modifier = Modifier
                 .fillMaxWidth()
         ) {

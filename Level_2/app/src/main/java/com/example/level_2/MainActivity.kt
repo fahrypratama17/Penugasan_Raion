@@ -50,8 +50,13 @@ class MainActivity : ComponentActivity() {
                 val name = backStackEntry.arguments?.getString("name") ?: ""
                 HomePageSad(navController, name) }
 
-            composable("happyPlaylist") { HappyPlaylistPage(navController) }
-            composable("sadPlaylist") { SadPlaylistPage(navController) }
+            composable("happyPlaylist") { backStackEntry ->
+                val name = backStackEntry.arguments?.getString("name") ?: ""
+                HappyPlaylistPage(navController, name) }
+
+            composable("sadPlaylist") { backStackEntry ->
+                val name = backStackEntry.arguments?.getString("name") ?: ""
+                SadPlaylistPage(navController, name) }
         }
     }
 }

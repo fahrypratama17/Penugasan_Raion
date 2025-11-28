@@ -1,12 +1,15 @@
 package com.example.level_2.view
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.gestures.snapping.SnapPosition
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -14,9 +17,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.level_2.ui.theme.blueGradient
-import com.example.level_2.ui.theme.yellowGradient
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.text.style.TextAlign
 
 @Composable
 fun SongDetailPage(
@@ -46,9 +48,27 @@ fun SongDetailPage(
         modifier = Modifier
             .fillMaxSize()
             .background(bg)
-            .padding(20.dp)
+            .padding(20.dp),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Detail Lagu", fontSize = 25.sp, fontWeight = FontWeight.Bold)
+        if (type == "happy") {
+            Text(
+                "Detail Lagu - Happy",
+                fontSize = 25.sp,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.fillMaxWidth(),
+                textAlign = TextAlign.Center
+            )
+        } else {
+            Text(
+                "Detail Lagu - Sad",
+                fontSize = 25.sp,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.fillMaxWidth(),
+                textAlign = TextAlign.Center
+            )
+        }
 
         Spacer(Modifier.height(20.dp))
 
@@ -60,9 +80,12 @@ fun SongDetailPage(
                 .padding(20.dp)
         ) {
             Column {
-                Text(judul, fontSize = 22.sp, fontWeight = FontWeight.Bold)
-                Text(penyanyi, fontSize = 16.sp)
+                Text(judul, fontSize = 22.sp, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth())
                 Spacer(Modifier.height(15.dp))
+                Text(penyanyi, fontSize = 16.sp, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth())
+                Spacer(Modifier.height(15.dp))
+                Text("Deskripsi:")
+                Spacer(Modifier.height(10.dp))
                 Text(deskripsi, fontSize = 14.sp)
             }
         }
